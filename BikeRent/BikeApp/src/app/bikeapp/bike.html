@@ -1,0 +1,25 @@
+<div class="d-flex pt-3 pb-3">
+    <p class="h4">🤩 Your rent ($)</p>
+</div>      
+    <div class="d-flex justify-content-evenly border rounded-2 bg-white pt-3 pb-3 mb-2" *ngFor="let rentbike of rentBike">
+        <div class="form-group d-flex justify-content-start col-12 col-md-8">
+            <p class="h5 mt-2">{{rentbike.name}} / {{getType(rentbike.bikeTypeId)}} / ${{rentbike.rentPrice}}</p>
+        </div>
+        <div class="form-group d-flex align-middle">
+            <input type="submit" class="btn btn-danger" value="Cancel rent" (click)="cancelRent(rentbike)"/>
+        </div>
+    </div>
+    <div>{{statusMessage}}</div>
+<div class="d-flex pt-3 pb-3">
+    <p class="h4">🚴 Available bicycles ({{bikes.length}})</p>
+</div>  
+    <div class="d-flex justify-content-evenly border rounded-2 bg-white pt-3 pb-3 mb-2" *ngFor="let bike of bikes">
+        <div class="form-group d-flex justify-content-start col-12 col-md-8 align-items-center">
+            <p class="h5 mt-2">{{bike.name}} / {{getType(bike.bikeTypeId)}} / ${{bike.rentPrice}}</p>
+        </div>
+        <div class="form-group d-flex align-middle">
+            <input type="submit" class="btn btn-primary" value="Rent" (click)="rent(bike)"/>
+            <input type="submit" class="btn btn-danger" value="Delete" (click)="deleteBike(bike)"/>
+        </div>
+    </div>
+    <div>{{statusMessage}}</div>

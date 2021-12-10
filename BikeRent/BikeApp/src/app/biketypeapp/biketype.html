@@ -1,0 +1,4 @@
+<label for="biketype">Bike Type</label>
+<select class="form-control" id="exampleFormControlSelect1" name="bikeTypeId" form="bike">
+    <option *ngFor="let b of biketypes" value="{{b.id}}">{{b.name}}</option>
+</select>

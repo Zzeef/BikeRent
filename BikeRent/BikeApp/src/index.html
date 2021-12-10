@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Bike rent</title>
+    <link href="/lib/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="/css/site.css" rel="stylesheet" />
+    </head>
+<body class="bg-light heading-color">
+    <div class="container mt-5">
+        <h1>Awesome Bike Rental</h1>
+        <div class="d-flex pt-3 pb-3">
+            <p class="h4">🤑 Create new rent</p>
+        </div>
+        <form method="post" action="/api/bike/create" id="bike">
+            <div class="d-flex justify-content-evenly border rounded-2 pt-4 pb-4 bg-bikerent">
+                <div class="form-group col-md-4">
+                    <lable>Bike name</lable>
+                    <input type="text" class="form-control" required form="bike" name="name"/>
+                </div>
+                <div class="form-group col-md-4">
+                    <biketype>Loading...</biketype>
+                </div>         
+                <div class="form-group col-md-2">
+                    <lable for="RentPrice">Price rent</lable>
+                    <input type="number" class="form-control" required form="bike" name="rentPrice"/>
+                </div>
+                <div class="form-group align-self-end">
+                    <input type="submit" class="btn btn-success"/>
+                </div>
+            </div>
+        </form>
+        <bike>Loading...</bike>
+    </div>
+</body>
+</html>
